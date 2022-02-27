@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --fontColor: #222;
+  --headerBgColor: rgb(97, 44, 22);
+  --headerHoverBgColor: rgb(68, 31, 15);
+  --mainBgColor: #eee;
+  --articleBgColor: #fff;
+  --sauceBgColor: rgb(218, 218, 218);
+  --footerBgColor: #222;
+  --fontWeight100: 100;
+  --fontWeight300: 300;
+  --fontWeight400: 400;
+  --boxShadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+  --cardShadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.38);
+}
+
+body {
+  max-width: 1920px;
+  width: 100%;
+  color: var(--fontColor);
+}
+
+body header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--headerBgColor);
+}
+
+body header a {
+  margin-left: 5px;
+  height: 80%;
+}
+
+body header a img {
+  height: 100%;
+}
+
+body header nav {
+  height: 100%;
+}
+
+body header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+body header nav ul li {
+  height: 100%;
+  border-left: 1px solid rgba(0, 0, 0, 0.274);
+  font-weight: var(--fontWeight100);
+}
+
+body header nav ul li a {
+  display: block;
+  height: 50px;
+  margin: 0;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body header nav ul li a:hover {
+  background-color: var(--headerHoverBgColor);
+}
+
+body header nav ul li:not(:last-child) {
+  width: 150px;
+}
+
+body header nav ul li:last-child {
+  width: 60px;
+}
+
+body main {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 917px;
+  background-color: var(--mainBgColor);
+}
+
+body main #mainNavi {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+}
+
+body main #mainNavi ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+body main #mainNavi ul li a {
+  color: var(--fontColor);
+}
+
+body main #mainNavi ul li i {
+  margin: 0px 10px;
+}
+
+body main section {
+  width: 80%;
+}
+
+body main section h2 {
+  font-size: 2rem;
+  font-weight: var(--fontWeight300);
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+body main section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: var(--articleBgColor);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+}
+
+body main section article h3 {
+  position: relative;
+  display: block;
+  width: 80%;
+  left: 5%;
+}
+
+body main section article h3:first-child {
+  margin: 15px 0px;
+}
+
+body main section article h3:not(:first-child) {
+  margin-top: 30px;
+}
+
+body main section article h4 {
+  margin-top: 10px;
+}
+
+body main section article .wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body main section article .content1 span {
+  border-bottom: 1px solid black;
+}
+
+body main section article #contentNav {
+  width: 800px;
+  border-radius: 10px;
+  margin: 30px auto;
+  -webkit-box-shadow: var(--cardShadow);
+          box-shadow: var(--cardShadow);
+  background-color: #e7e7e7;
+}
+
+body main section article #contentNav ul li {
+  margin: 15px;
+  margin-left: 40px;
+}
+
+body main section article #contentNav ul li a {
+  border-bottom: 1px solid black;
+}
+
+body main section article .sauceArea {
+  width: 800px;
+  border-radius: 10px;
+  margin: 30px auto;
+  -webkit-box-shadow: var(--cardShadow);
+          box-shadow: var(--cardShadow);
+  background-color: #e7e7e7;
+}
+
+body main section article .sauceArea2 div {
+  margin: 10px;
+}
+
+body main section article .articleCover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 0px;
+}
+
+body main section article .articleCover .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  overflow: hidden;
+  width: 150px;
+  height: 200px;
+  margin: 20px 20px;
+  -webkit-box-shadow: var(--cardShadow);
+          box-shadow: var(--cardShadow);
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s, -webkit-transform;
+  transition: opacity 0.5s, -webkit-transform;
+  transition: transform, opacity 0.5s;
+  transition: transform, opacity 0.5s, -webkit-transform;
+  -webkit-transform: translate(10%, 0%);
+          transform: translate(10%, 0%);
+  opacity: 0;
+}
+
+body main section article .articleCover .card a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--fontColor);
+}
+
+body main section article .articleCover .card .upperCard {
+  height: 65%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body main section article .articleCover .card .lowerCard {
+  overflow: hidden;
+  height: 35%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.582);
+  font-size: 1.1rem;
+}
+
+body main section article .articleCover:first-child {
+  margin-left: 20px;
+}
+
+body main section article .articleCover .cardload {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+body main section article .articleCover .htmlcard .lowerCard {
+  background: linear-gradient(318deg, #fe9900 0%, white 100%);
+}
+
+body main section article .articleCover .cssSassCard .lowerCard {
+  background: linear-gradient(318deg, #fe005e 0%, #40d6fa 100%);
+  color: white;
+}
+
+body main section article .articleCover .jscard .lowerCard {
+  background-color: #7b79ff;
+  color: white;
+}
+
+body main section article .articleCover .jslibrarycard .lowerCard {
+  background-color: #7dff99;
+}
+
+body main section article .articleCover #jslibrary1Animejs .upperCard {
+  width: 150px;
+  height: 130px;
+}
+
+body main section article .articleCover #jslibrary1Animejs .upperCard img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body main section article .articleCover #jslibrary1Animejs .lowerCard {
+  font-size: 1.2rem;
+  font-weight: var(--fontWeight400);
+}
+
+body main section article .articleCover #html2Tag .lowerCard {
+  font-size: 1rem;
+}
+
+body main section article .articleCover #css2Sass .lowerCard {
+  font-size: 1rem;
+}
+
+body main section:first-of-type {
+  margin-top: 100px;
+}
+
+body main section:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+body main section:last-of-type {
+  margin-bottom: 30px;
+}
+
+body main section .is-active {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+body main #moveTopBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 9999;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid var(--fontColor);
+  cursor: pointer;
+  background-color: white;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 20px;
+  font-size: small;
+  background-color: var(--footerBgColor);
+  color: #fff;
+}
+/*# sourceMappingURL=html2Tag.css.map */

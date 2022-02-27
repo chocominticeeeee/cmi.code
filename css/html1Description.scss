@@ -1,0 +1,455 @@
+// fonts
+// https://fonts.google.com/
+
+// Animation
+// https://coco-factory.jp/ugokuweb/
+
+// GradientGenerator
+// https://cssgradient.io/
+
+// clip-path
+// https://bennettfeely.com/clippy/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 2rem;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --fontColor: #222;
+  --headerBgColor: rgb(97, 44, 22);
+  --headerHoverBgColor: rgb(68, 31, 15);
+  --mainBgColor: #eee;
+  --articleBgColor: #fff;
+  --sauceBgColor: rgb(218, 218, 218);
+  --footerBgColor: #222;
+  --fontWeight100: 100;
+  --fontWeight300: 300;
+  --fontWeight400: 400;
+  --boxShadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+  --cardShadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.38);
+}
+
+body {
+  max-width: 1920px;
+  width: 100%;
+  color: var(--fontColor);
+  //   ヘッダー
+  & header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--headerBgColor);
+    & a {
+      margin-left: 5px;
+      height: 80%;
+      & img {
+        height: 100%;
+      }
+    }
+    & nav {
+      height: 100%;
+      & ul {
+        display: flex;
+        height: 100%;
+        & li {
+          height: 100%;
+          border-left: 1px solid rgba(0, 0, 0, 0.274);
+          font-weight: var(--fontWeight100);
+          & a {
+            display: block;
+            height: 50px;
+            margin: 0;
+            color: white;
+            white-space: nowrap;
+            text-align: center;
+            line-height: 50px;
+            transition: all 0.2s;
+            &:hover {
+              background-color: var(--headerHoverBgColor);
+            }
+          }
+          &:not(:last-child) {
+            width: 150px;
+          }
+          &:last-child {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  //   メイン
+  & main {
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    min-height: 917px;
+    background-color: var(--mainBgColor);
+    & nav {
+      position: absolute;
+      top: 70px;
+      left: 40px;
+      & ul {
+        display: flex;
+        flex-flow: row;
+        & li {
+          & a {
+            color: var(--fontColor);
+          }
+          & i {
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+    //   セクション
+    & section {
+      width: 80%;
+      & h2 {
+        font-size: 2rem;
+        font-weight: var(--fontWeight300);
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        padding-left: 30px;
+      }
+      //   アーティクル
+      & article {
+        display: flex;
+        flex-flow: column;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 25px;
+        border-radius: 10px;
+        box-shadow: var(--boxShadow);
+        background-color: var(--articleBgColor);
+
+        transition: all 1s;
+        transform: translateX(50px);
+        opacity: 0;
+        & h3 {
+          position: relative;
+          display: block;
+          width: 80%;
+          left: 5%;
+          &:first-child {
+            margin: 15px 0px;
+          }
+          &:not(:first-child) {
+            margin-top: 30px;
+          }
+        }
+        & h4 {
+          margin-top: 10px;
+        }
+        & .wrapper {
+          width: 80%;
+          margin: 0 auto;
+        }
+        & .content1 {
+          & span {
+            border-bottom: 1px solid black;
+          }
+        }
+        // ソースエリア
+        & #html-css {
+          display: flex;
+          justify-content: space-evenly;
+          width: 90%;
+          height: 270px;
+          margin: 15px auto;
+          background-color: white;
+          // border: 1px solid black;
+          & p {
+            padding-left: 5px;
+            background-color: rgb(155, 155, 155);
+            border-bottom: 1px solid black;
+          }
+          & #htmlArea {
+            overflow: hidden;
+            display: flex;
+            flex-flow: column;
+            width: 45%;
+            border: 1px solid black;
+            border-radius: 5px;
+            & img {
+              width: 50px;
+              aspect-ratio: 1/1;
+            }
+            & p {
+              color: blue;
+            }
+            & div {
+              background-color: rgb(177, 237, 255);
+              height: 100%;
+            }
+          }
+          & #cssArea {
+            overflow: hidden;
+            display: flex;
+            flex-flow: column;
+            width: 45%;
+            border: 1px solid black;
+            border-radius: 5px;
+            & .bg {
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              background-image: url(../img/html1Description/watercolor_00010.jpg);
+              background-position: center;
+            }
+            & p {
+              color: red;
+            }
+            & #authorArea {
+              display: flex;
+              flex-flow: row;
+              justify-content: flex-start;
+              align-items: center;
+              & img {
+                width: 50px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                margin: 3px 5px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.329);
+              }
+              & h5 {
+                font-size: 1vw;
+                border-bottom: 1px solid rgb(0, 0, 0);
+                text-shadow: 0px 0px 10px rgb(255, 255, 255);
+              }
+            }
+            & .text {
+              width: 90%;
+              margin: 0 auto;
+              padding: 10px;
+              border-radius: 10px;
+              border: 1px solid rgba(0, 0, 0, 0.288);
+              background-color: rgb(255, 255, 255);
+              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.329);
+              transition: all 0.5s;
+              & span {
+                &:nth-child(1) {
+                  color: rgb(99, 196, 2);
+                }
+                &:nth-child(5) {
+                  color: rgb(155, 0, 142);
+                }
+                &:nth-child(3) {
+                  color: rgb(255, 0, 0);
+                }
+              }
+              &:hover {
+                background-color: rgb(51, 51, 51);
+                color: rgb(230, 230, 230);
+              }
+            }
+          }
+        }
+        & #sauceArea2 {
+          width: 97%;
+          margin: 0 auto;
+          border: 1px solid black;
+          background-color: var(--sauceBgColor);
+          & p {
+            margin-left: 3px;
+            & span {
+              color: blue;
+            }
+          }
+        }
+        & #tags {
+          background-color: var(--sauceBgColor);
+          margin: 0 auto;
+          width: 97%;
+          border: 1px solid black;
+          color: blue;
+        }
+        // カードを囲うクラス
+        & .articleCover {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          padding: 10px 0px;
+          // カードクラス
+          & .card {
+            & a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              color: var(--fontColor);
+            }
+            display: flex;
+            flex-flow: column;
+            overflow: hidden;
+            width: 150px;
+            height: 200px;
+            margin: 20px 20px;
+            box-shadow: var(--cardShadow);
+            border: 1px solid rgba(0, 0, 0, 0.274);
+            cursor: pointer;
+            //observeアニメーション
+            transition: transform, opacity 0.5s;
+            transform: translate(10%, 0%);
+            opacity: 0;
+            & .upperCard {
+              height: 65%;
+              width: 100%;
+              overflow: hidden;
+            }
+            & .lowerCard {
+              overflow: hidden;
+              height: 35%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              border-top: 1px solid rgba(0, 0, 0, 0.582);
+              font-size: 1.1rem;
+            }
+          }
+          &:first-child {
+            margin-left: 20px;
+          }
+          & .cardload {
+            opacity: 1;
+            transform: none;
+          }
+          //   HTMLセクション
+          & .htmlcard {
+            & .lowerCard {
+              background: linear-gradient(
+                318deg,
+                rgba(254, 153, 0, 1) 0%,
+                rgba(255, 255, 255, 1) 100%
+              );
+            }
+          }
+          //   CSS、SASSセクション
+          & .cssSassCard {
+            & .lowerCard {
+              background: linear-gradient(
+                318deg,
+                rgba(254, 0, 94, 1) 0%,
+                rgba(64, 214, 250, 1) 100%
+              );
+              color: white;
+            }
+          }
+          //   JavaScriptセクション
+          & .jscard {
+            & .lowerCard {
+              background-color: rgb(123, 121, 255);
+              color: white;
+            }
+          }
+          //   Jsライブラリセクション
+          & .jslibrarycard {
+            & .lowerCard {
+              background-color: rgb(125, 255, 153);
+            }
+          }
+
+          //   個別カードID
+          & #jslibrary1Animejs {
+            & .upperCard {
+              width: 150px;
+              height: 130px;
+              & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            & .lowerCard {
+              font-size: 1.2rem;
+              font-weight: var(--fontWeight400);
+            }
+          }
+          & #html2Tag {
+            & .lowerCard {
+              font-size: 1rem;
+            }
+          }
+          & #css2Sass {
+            & .lowerCard {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      &:first-of-type {
+        margin-top: 100px;
+      }
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+
+      & .is-active {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    // トップに戻るボタン
+    & #moveTopBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 9999;
+      bottom: 50px;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: 1px solid var(--fontColor);
+      cursor: pointer;
+      background-color: white;
+    }
+  }
+  //   フッター
+  & footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    font-size: small;
+    background-color: var(--footerBgColor);
+    color: #fff;
+  }
+}

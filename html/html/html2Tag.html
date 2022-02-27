@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ちょこみんの学習スペース</title>
+    <link rel="stylesheet" href="../css/html2Tag.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header id="header">
+      <a href="../index.html">
+        <img src="../img/index/cmicodelogo.png" alt="cmicodelogo.png" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="">お問い合わせ</a></li>
+          <li><a href="">ログイン</a></li>
+          <li>
+            <a href=""><i class="ai-bell"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- メイン -->
+    <main>
+      <!-- ナビゲーション -->
+      <nav id="mainNavi">
+        <ul>
+          <li>
+            <a href="../index.html"><i class="ai-home"></i>TOP</a
+            ><i class="ai-chevron-right"></i>
+          </li>
+          <li><a href="">HTMLのタグとは</a></li>
+        </ul>
+      </nav>
+      <!-- セクション -->
+      <section>
+        <h2><i class="ai-tag"></i>HTMLのタグ、すべて紹介します！（嘘）</h2>
+        <article>
+          <h3><i class="ai-pin"></i>タグとは？</h3>
+          <div class="wrapper content1">
+            HTMLではサイト内で「見出しにする、段落にする、リストにする」とタグで構造を作っていきます。<br />
+            ここではよく使うHTMLタグをいくつか紹介していきます♪
+          </div>
+          <nav id="contentNav">
+            <ul>
+              <li>
+                <a href="#hTag">hタグ（見出しの作成）</a>
+              </li>
+              <li>
+                <a href="#imgTag">imgタグ（画像の埋め込み）</a>
+              </li>
+              <li>
+                <a href="#ulTag">ul/ol/liタグ（箇条書き）</a>
+              </li>
+              <li>
+                <a href="#brTag">brタグ（改行）</a>
+              </li>
+              <li>
+                <a href="#aTag">aタグ（リンクの挿入）</a>
+              </li>
+              <li>
+                <a href="#pTag">pタグ（段落の作成）</a>
+              </li>
+              <li>
+                <a href="#divTag">divタグ</a>
+              </li>
+            </ul>
+          </nav>
+          <h3 id="hTag"><i class="ai-pin"></i>hタグ（見出しの作成）</h3>
+          <div class="wrapper">
+            hタグとは、要素を見出しにするタグです。<br />
+            「h」とは「heading（ヘディング）」の略で、見出しを作成する際に使用します。
+            h1が大見出しで1番大きく、サイトのメインとなる見出しに使われます。h2〜h6となるにつれ、小さな見出しになっていきます。
+            <div class="sauceArea">
+              <div>
+                <span style="font-size: 3rem">見出し</span>
+              </div>
+              <div>
+                <span style="font-size: 2.5rem">見出し</span>
+              </div>
+              <div>
+                <span style="font-size: 2rem">見出し</span>
+              </div>
+              <div>
+                <span style="font-size: 1.5rem">見出し</span>
+              </div>
+            </div>
+            h1が大見出しで1番大きく、サイトのメインとなる見出しに使われます。h2〜h6となるにつれ、小さな見出しになっていきます。
+          </div>
+          <h3 id="imgTag"><i class="ai-pin"></i>imgタグ（画像の埋め込み）</h3>
+          <div class="wrapper">
+            「img」とは「image（イメージ）」の略で、画像を表示する際に使用します。<br />
+            src属性は必須の属性でファイル名(jpgやpng形式など)を指定します。
+            alt属性は必須ではありませんが、代替テキストを設定することができアクセシビリティのために記述するようにしましょう。
+            代替テキストとは、ページ上で画像の表示がされなかった際に表示されるテキストです。
+          </div>
+          <div class="sauceArea sauceArea2">
+            <div>&lt;img src="logo.jpg" alt="chocominのロゴ"&gt;</div>
+          </div>
+          <h3><i class="ai-pin"></i>ul/ol/liタグ（箇条書き）</h3>
+          <div class="wrapper">
+            <h4>ulタグ</h4>
+            「ul」とは「unordered
+            list（アンオーダードリスト）」の略で、順序のないリストを表示する際に使用します。
+            type属性を指定することで、先頭の「・」を変更することができます。
+            <h4>olタグ</h4>
+            olタグ 「ol」とは「ordered
+            list（オーダードリスト）」の略で、順序のあるリストを表示する際に使用します。
+            type属性を指定することで、先頭につく記号の種類を変更できます。
+            <h4>liタグ</h4>
+            liタグ 「li」とは「list
+            item（リストアイテム）」の略で、リストの各項目を記述する際に使用します。
+            ulタグもしくはolタグの入れ子として使用します。
+          </div>
+          <div class="sauceArea sauceArea2">
+            <pre>
+              &lt;ul&gt;
+                &lt;li&gt;HTML/CSS&lt;/li&gt;
+                &lt;li&gt;JavaScript&lt;/li&gt;
+                &lt;li&gt;Design&lt;/li&gt;
+                &lt;li&gt;WordPress&lt;/li&gt;
+              &lt;/ul&gt;
+              
+              &lt;ol&gt;
+                &lt;li&gt;HTML/CSS&lt;/li&gt;
+                &lt;li&gt;JavaScript&lt;/li&gt;
+                &lt;li&gt;Design&lt;/li&gt;
+                &lt;li&gt;WordPress&lt;/li&gt;
+              &lt;/ol&gt;
+            </pre>
+          </div>
+          <h3 id="brTag"><i class="ai-pin"></i>brタグ（改行）</h3>
+          <div class="wrapper">
+            「BR」とは「Break」の略で、改行を行うためのタグです。終了タグなしで使います。<br />似たタグに&lt;p&gt;
+            タグがありますが、文章を明示的に改行するためには&lt;br&gt;タグを用います。
+            &lt;br&gt;タグは、しばしば余白を開けるために使用されることもありますが、その場合はタグではなくスタイルシートを使用して調整することをおすすめします。<br />&lt;br&gt;タグでレイアウトを作っても、ユーザーの環境によって行間などが変わってしまう可能性があるからです。また、同じ理由で、文字サイズによって改行位置が変わってしまい、テキストが読みづらくなってしまうこともあるので注意が必要です。
+          </div>
+          <div class="sauceArea sauceArea2">
+            <div>
+              &lt;p&gt;こんちくび！&lt;br&gt;ぼくはちょこみん！&lt;/p&gt;
+            </div>
+          </div>
+          <h3><i class="ai-pin"></i>aタグ（リンクの挿入）</h3>
+          <div class="wrapper">
+            「A」とは、「Anchor（アンカー）」の略で、リンクの出発点や到達点を指定するタグです。<br>
+            リンクの出発点を示す場合は、href属性でリンク先を指定し、到達点を示す場合はname属性やid属性を使用し、その場所の名前（識別子）を指定します。
+            HTML4では&lt;a&gt;タグはインライン要素であるため、ブロックレベル要素を含めることができず、ブロック全体をリンクとして振る舞わせるには工夫が必要でした。<br>
+            HTML5ではインライン要素/ブロックレベル要素といったタグの分類に変更があり、&lt;a&gt;タグの中に&lt;div&gt;タグなどの元ブロックレベル要素を含めてもよいことになりました。
+          </div>
+          <div class="sauceArea sauceArea2">
+            <div>
+              &lt;a href="https://chocominticeeeee.github.io/cmi.code/index.html"&gt;サンプルサイトへ飛びます。&lt;/a&gt;
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- トップボタン -->
+      <div id="moveTopBtn">↑</div>
+    </main>
+    <!-- フッター -->
+    <footer>
+      <p>Created by Chocomin</p>
+    </footer>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <script src="../js/rellax.min.js"></script>
+    <script src="../js/ztext.min.js"></script>
+    <script src="../js/anime.min.js"></script>
+    <script src="../js/html2Tag.js"></script>
+  </body>
+</html>

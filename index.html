@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- ヘッド -->
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- タイトル、リンク -->
+    <title>ちょこみんの学習スペース</title>
+    <link rel="stylesheet" href="css\style.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+  </head>
+  <!-- ボディ -->
+  <body>
+    <!-- ヘッダー -->
+    <header id="header">
+      <a href="">
+        <img src="img/index/cmicodelogo.png" alt="cmicodelogo.png" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="">お問い合わせ</a></li>
+          <li><a href="html/login.html">ログイン</a></li>
+          <li>
+            <a href=""><i class="ai-bell"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main__hamburgerBtn" onclick="toggleHamburgerMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- メインビジュアル -->
+    <div class="hamburgerMenu">
+      <div class="hamburgerMenu__inner">
+        <nav>
+          <ul>
+            <li onclick="linkTwitter()"><i class="ai-twitter-fill"></i>ちょこみんのTwitter</li>
+            <li onclick="linkLogin()"><i class="ai-person"></i>ログイン</li>
+            <li onclick="linkGoroku()">ちょこみん語録</li>
+            <li onclick="linkCsgoCommands()">CS:GO Commands</li>
+            <li onclick="linkClickgame()">クリックゲーム</li>
+            <li onclick=""><i class="ai-chat-question"></i>お問い合わせ</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="mainVisual">
+      <img src="img\index\mainVisual.jpg" alt="MainVisual.jpg" />
+      <div>
+        <h2>ちょこみんの学習スペースへようこそ</h2>
+      </div>
+    </div>
+    <!-- メインここから -->
+    <main>
+      <div id="auth"></div>
+      <!-- HTMLセクション -->
+      <section>
+        <h3>HTML</h3>
+        <!-- アーティクル -->
+        <article>
+          <div class="articleCover">
+            <!-- カード -->
+            <!-- HTMLとは -->
+            <div class="card htmlcard" id="html1Description">
+              <a href="html/html/html1Description.html">
+                <div class="upperCard">
+                  <img src="img/cardsimg/html/html5.png" alt="html5.png" />
+                </div>
+                <div class="lowerCard">HTMLとは？<br />なんだろう...</div>
+              </a>
+            </div>
+            <!-- タグについて -->
+            <div class="card htmlcard" id="html2Tag">
+              <a href="html/html2Tag.html">
+                <div class="upperCard">
+                  <img src="img/cardsimg/html/htmltag.png" alt="htmltag.png" />
+                </div>
+                <div class="lowerCard">HTMLのタグ<br />全部紹介します(嘘)</div>
+              </a>
+            </div>
+            <!-- SEO -->
+            <div class="card htmlcard" id="html3Seo">
+              <a href="">
+                <div class="upperCard">
+                  <img src="img/cardsimg/html/htmlseo.png" alt="htmlseo.png" />
+                </div>
+                <div class="lowerCard">SEO対策とは？<br />やり方解説♪</div>
+              </a>
+            </div>
+            <!-- Emmet -->
+            <div class="card htmlcard" id="html4Emmet">
+              <a href="">
+                <div class="upperCard">
+                  <img src="img/cardsimg/html/Emmet.png" alt="Emmet.png" />
+                </div>
+                <div class="lowerCard">効率爆速化！<br />Emmetの使い方</div>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- CSS、SASSセクション -->
+      <section>
+        <h3>CSS,SASS</h3>
+        <article>
+          <div class="articleCover">
+            <!-- カード -->
+            <!-- CSSとは -->
+            <div class="card cssSassCard" id="css1Description">
+              <a href="">
+                <div class="upperCard">
+                  <img src="img/cardsimg/csssass/css.png" alt="css.png" />
+                </div>
+                <div class="lowerCard">CSSとは？<br />徹底解説！</div>
+              </a>
+            </div>
+            <!-- Sassとは -->
+            <div class="card cssSassCard" id="css2Sass">
+              <a href="">
+                <div class="upperCard">
+                  <img src="img/cardsimg/csssass/sass.png" alt="sass.png" />
+                </div>
+                <div class="lowerCard">Sassとは？<br />書き方教えますｗ</div>
+              </a>
+            </div>
+            <!-- ダミー -->
+            <div class="card cssSassCard" id="css3">
+              <a href="">
+                <div class="upperCard">
+                  <img src="img/cardsimg/dummy.png" alt="animejs.png" />
+                </div>
+                <div class="lowerCard">Dummy<br />Dummy</div>
+              </a>
+            </div>
+
+            <div class="card cssSassCard" id="css4">
+              <a href="">
+                <div class="upperCard">
+                  <img src="img/cardsimg/dummy.png" alt="animejs.png" />
+                </div>
+                <div class="lowerCard">Dummy<br />Dummy</div>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- ＪＳセクション -->
+      <section>
+        <h3>JavaScript</h3>
+        <article>
+          <div class="articleCover">
+            <!-- カード -->
+            <!-- Jsとは -->
+            <div class="card jscard" id="javaScript1Description">
+              <a href="">
+                <div class="upperCard">
+                  <img
+                    src="img/cardsimg/JavaScript/javascript.png"
+                    alt="javascript.png"
+                  />
+                </div>
+                <div class="lowerCard">JavaScript<br />解説～ｗ</div>
+              </a>
+            </div>
+            <!-- 基本的な文法、構文 -->
+            <div class="card jscard" id="javaScript2">
+              <a href="">
+                <div class="upperCard">
+                  <img
+                    src="img/cardsimg/JavaScript/javascript.png"
+                    alt="animejs.png"
+                  />
+                </div>
+                <div class="lowerCard">文法、構文<br />やっていきます</div>
+              </a>
+            </div>
+            <!-- DOM操作とは -->
+            <div class="card jscard" id="javaScript3DOM">
+              <a href="">
+                <div class="upperCard">
+                  <img
+                    src="img/cardsimg/JavaScript/javascript.png"
+                    alt="animejs.png"
+                  />
+                </div>
+                <div class="lowerCard">DOM操作とは？<br />実際に書いてみた</div>
+              </a>
+            </div>
+
+            <div class="card jscard" id="javaScript4">
+              <div class="upperCard">
+                <img
+                  src="img/cardsimg/JavaScript/javascript.png"
+                  alt="animejs.png"
+                />
+              </div>
+              <div class="lowerCard">Dummy<br />Dummy</div>
+            </div>
+
+            <div class="card jscard" id="javaScript5">
+              <div class="upperCard">
+                <img src="img/cardsimg/dummy.png" alt="animejs.png" />
+              </div>
+              <div class="lowerCard">Dummy<br />Dummy</div>
+            </div>
+
+            <div class="card jscard" id="javaScript6">
+              <div class="upperCard">
+                <img src="img/cardsimg/dummy.png" alt="animejs.png" />
+              </div>
+              <div class="lowerCard">Dummy<br />Dummy</div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- Jsライブラリ -->
+      <section>
+        <h3>Jsライブラリ</h3>
+        <article>
+          <div class="articleCover">
+            <!-- カード -->
+            <!-- Animejs -->
+            <div class="card jslibrarycard" id="jslibrary1Animejs">
+              <div class="upperCard">
+                <img src="img/cardsimg/animejs/animejs.png" alt="animejs.png" />
+              </div>
+              <div class="lowerCard">
+                <p>アニメーション<br />Anime.js</p>
+              </div>
+            </div>
+            <!-- Ztext -->
+            <div class="card jslibrarycard" id="jsLibrary2Ztext">
+              <div class="upperCard">
+                <img src="img/cardsimg/jslibrary/ztext.png" alt="ztext.png" />
+              </div>
+              <div class="lowerCard">なんでも立体化<br />ztext.js</div>
+            </div>
+            <!-- Rellax -->
+            <div class="card jslibrarycard" id="jsLibrary2Rellax">
+              <div class="upperCard">
+                <img src="img/cardsimg/jslibrary/rellax.png" alt="rellax.png" />
+              </div>
+              <div class="lowerCard">パララックス<br />Rellax.js</div>
+            </div>
+            <!-- Swiper -->
+            <div class="card jslibrarycard" id="jsLibrary3Swiper">
+              <div class="upperCard">
+                <img
+                  src="img/cardsimg/jslibrary/swiper7_01.png"
+                  alt="swiper7_01.png"
+                />
+              </div>
+              <div class="lowerCard">Swiper<br />Swiper.js</div>
+            </div>
+            <!-- ダミー -->
+            <div class="card jslibrarycard" id="jsLibrary4">
+              <div class="upperCard">
+                <img src="img/cardsimg/dummy.png" alt="animejs.png" />
+              </div>
+              <div class="lowerCard">Dummy<br />Dummy</div>
+            </div>
+            <!-- ダミー -->
+            <div class="card jslibrarycard" id="jsLibrary5">
+              <div class="upperCard">
+                <img src="img/cardsimg/dummy.png" alt="animejs.png" />
+              </div>
+              <div class="lowerCard">Dummy<br />Dummy</div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- トップボタン -->
+      <div class="moveTopBtn">↑</div>
+    </main>
+    <!-- フッター -->
+    <footer>
+      <p>Created by Chocomin</p>
+    </footer>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <script src="js\rellax.min.js"></script>
+    <script src="js\ztext.min.js"></script>
+    <script src="js\anime.min.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+    <script src="js\script.js"></script>
+  </body>
+</html>

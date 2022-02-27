@@ -1,0 +1,667 @@
+// fonts
+// https://fonts.google.com/
+
+// Animation
+// https://coco-factory.jp/ugokuweb/
+
+// GradientGenerator
+// https://cssgradient.io/
+
+// clip-path
+// https://bennettfeely.com/clippy/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --fontColor: #222;
+  --headerBgColor: rgb(97, 44, 22);
+  --headerHoverBgColor: rgb(68, 31, 15);
+  --mainBgColor: #eee;
+  --articleBgColor: #fff;
+  --footerBgColor: #222;
+  --fontWeight100: 100;
+  --fontWeight300: 300;
+  --fontWeight400: 400;
+  --boxShadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+  --cardShadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.38);
+  --border:rgb(32, 32, 32);
+}
+
+// PC版
+@media screen and(min-width:837px) {
+  body {
+    max-width: 1920px;
+    width: 100%;
+    color: var(--fontColor);
+    //   ヘッダー
+    & header {
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      background-color: var(--headerBgColor);
+      & a {
+        margin-left: 5px;
+        height: 80%;
+        & img {
+          height: 100%;
+        }
+      }
+      & .main__hamburgerBtn {
+        display: none;
+      }
+      & nav {
+        height: 100%;
+        & ul {
+          display: flex;
+          height: 100%;
+          & li {
+            height: 100%;
+            border-left: 1px solid rgba(0, 0, 0, 0.274);
+            font-weight: var(--fontWeight100);
+            & a {
+              display: block;
+              height: 50px;
+              margin: 0;
+              color: white;
+              white-space: nowrap;
+              text-align: center;
+              line-height: 50px;
+              transition: all 0.2s;
+              &:hover {
+                background-color: var(--headerHoverBgColor);
+              }
+            }
+            &:not(:last-child) {
+              width: 150px;
+            }
+            &:last-child {
+              width: 60px;
+            }
+          }
+        }
+      }
+    }
+    //   メインビジュアル
+    & #mainVisual {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      & img {
+        position: absolute;
+        max-width: 1920px;
+        filter: brightness(0.3);
+        object-fit: cover;
+      }
+      & div {
+        & h2 {
+          display: block;
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 2.8rem;
+          font-weight: var(--fontWeight400);
+          white-space: nowrap;
+          transition: letter-spacing 2s, opacity 2s;
+          letter-spacing: 30px;
+          opacity: 0;
+        }
+        & .h2load {
+          letter-spacing: normal;
+          opacity: 1;
+        }
+      }
+    }
+    & .hamburgerMenu {
+      display: none;
+    }
+    //   メイン
+    & main {
+      overflow: hidden;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100%;
+      background-color: var(--mainBgColor);
+      //   セクション
+      & section {
+        width: 80%;
+        margin: 35px 0px;
+        & h3 {
+          font-size: 2rem;
+          font-weight: 100;
+          letter-spacing: 3px;
+          margin-bottom: 15px;
+          padding-left: 30px;
+        }
+        //   アーティクル
+        & article {
+          width: 90%;
+          margin: 0 auto;
+          border-radius: 10px;
+          box-shadow: var(--boxShadow);
+          background-color: var(--articleBgColor);
+          // カードを囲うクラス
+          & .articleCover {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 10px 0px;
+            // カードクラス
+            & .card {
+              & a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: var(--fontColor);
+              }
+              display: flex;
+              flex-flow: column;
+              overflow: hidden;
+              width: 150px;
+              height: 200px;
+              margin: 20px 20px;
+              box-shadow: var(--cardShadow);
+              border: 1px solid rgba(0, 0, 0, 0.274);
+              cursor: pointer;
+              //observeアニメーション
+              transition: transform, opacity 0.5s;
+              transform: translate(10%, 0%);
+              opacity: 0;
+              & .upperCard {
+                height: 65%;
+                width: 100%;
+                overflow: hidden;
+              }
+              & .lowerCard {
+                overflow: hidden;
+                height: 35%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-top: 1px solid rgba(0, 0, 0, 0.582);
+                font-size: 1.1rem;
+              }
+            }
+            &:first-child {
+              margin-left: 20px;
+            }
+            & .cardload {
+              opacity: 1;
+              transform: none;
+            }
+            //   HTMLセクション
+            & .htmlcard {
+              & .lowerCard {
+                background: linear-gradient(
+                  318deg,
+                  rgba(254, 153, 0, 1) 0%,
+                  rgba(255, 255, 255, 1) 100%
+                );
+              }
+            }
+            //   CSS、SASSセクション
+            & .cssSassCard {
+              & .lowerCard {
+                background: linear-gradient(
+                  318deg,
+                  rgba(254, 0, 94, 1) 0%,
+                  rgba(64, 214, 250, 1) 100%
+                );
+                color: white;
+              }
+            }
+            //   JavaScriptセクション
+            & .jscard {
+              & .lowerCard {
+                background-color: rgb(123, 121, 255);
+                color: white;
+              }
+            }
+            //   Jsライブラリセクション
+            & .jslibrarycard {
+              & .lowerCard {
+                font-size: 1.2rem;
+                font-weight: var(--fontWeight400);
+                background-color: rgb(125, 255, 153);
+              }
+            }
+
+            //   個別カードID
+            & #jslibrary1Animejs {
+              & .upperCard {
+                width: 150px;
+                height: 130px;
+                & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              & .lowerCard {
+                font-size: 1.2rem;
+                font-weight: var(--fontWeight400);
+              }
+            }
+            & #jsLibrary3Swiper {
+              & .upperCard {
+                width: 150px;
+                height: 130px;
+                & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              & .lowerCard {
+                font-size: 1.2rem;
+                font-weight: var(--fontWeight400);
+              }
+            }
+            & #html2Tag {
+              & .lowerCard {
+                font-size: 1rem;
+              }
+            }
+            & #css2Sass {
+              & .lowerCard {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+      // トップに戻るボタン
+      & .moveTopBtn {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid var(--fontColor);
+        cursor: pointer;
+        background-color: white;
+      }
+      & .is-in{
+        display: flex;
+      }
+    }
+    //   フッター
+    & footer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 20px;
+      font-size: small;
+      background-color: var(--footerBgColor);
+      color: #fff;
+    }
+  }
+}
+// モバイル版
+@media screen and(max-width:836px) {
+  body {
+    max-width: 1920px;
+    width: 100%;
+    color: var(--fontColor);
+    //   ヘッダー
+    & header {
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      background-color: var(--headerBgColor);
+      & a {
+        margin-left: 5px;
+        height: 80%;
+        & img {
+          height: 100%;
+        }
+      }
+      & nav {
+        display: none;
+        height: 100%;
+        & ul {
+          display: flex;
+          height: 100%;
+          & li {
+            height: 100%;
+            border-left: 1px solid rgba(0, 0, 0, 0.274);
+            font-weight: var(--fontWeight100);
+            & a {
+              display: block;
+              height: 50px;
+              margin: 0;
+              color: white;
+              white-space: nowrap;
+              text-align: center;
+              line-height: 50px;
+              transition: all 0.2s;
+              &:hover {
+                background-color: var(--headerHoverBgColor);
+              }
+            }
+            &:not(:last-child) {
+              width: 150px;
+            }
+            &:last-child {
+              width: 60px;
+            }
+          }
+        }
+      }
+      & .main__hamburgerBtn {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(34, 34, 34, 0.411);
+        }
+        & span {
+          display: block;
+          width: 30px;
+          height: 3px;
+          border-radius: 5px;
+          margin: 3px;
+          background-color: rgb(255, 255, 255);
+        }
+      }
+    }
+    //   メインビジュアル
+    & #mainVisual {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      & img {
+        position: absolute;
+        max-width: 900px;
+        filter: brightness(0.3);
+        object-fit: cover;
+      }
+      & div {
+        & h2 {
+          display: block;
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -25%);
+          color: rgb(255, 255, 255);
+          font-weight: var(--fontWeight400);
+          font-size: 1.5rem;
+          white-space: nowrap;
+          transition: letter-spacing 2s, opacity 2s;
+          letter-spacing: 30px;
+          opacity: 0;
+        }
+        & .h2load {
+          letter-spacing: normal;
+          opacity: 1;
+        }
+      }
+    }
+    & .hamburgerMenu {
+      display: none;
+      justify-content: flex-end;
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(34, 34, 34, 0.747);
+      z-index: 9999;
+      & .hamburgerMenu__inner {
+        width: 200px;
+        background-color: var(--headerBgColor);
+        & nav {
+          background-color: var(--headerBgColor);
+          & ul {
+            & li {
+              cursor: pointer;
+              text-align: center;
+              color: white;
+              padding: 10px 0px;
+              border-bottom: 1px solid var(--border);
+              &:first-child{
+                border-top: 1px solid var(--border);
+              }
+              &:hover{
+                background-color: rgba(34, 34, 34, 0.329);
+              }
+            }
+          }
+        }
+      }
+    }
+    //   メイン
+    & main {
+      overflow: hidden;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100%;
+      background-color: var(--mainBgColor);
+      //   セクション
+      & section {
+        width: 80%;
+        min-width: 470px;
+        margin: 35px 0px;
+        & h3 {
+          font-size: 2rem;
+          font-weight: 100;
+          letter-spacing: 3px;
+          margin-bottom: 15px;
+          padding-left: 30px;
+        }
+        //   アーティクル
+        & article {
+          width: 80%;
+          min-width: 400px;
+          margin: 0 auto;
+          border-radius: 10px;
+          box-shadow: var(--boxShadow);
+          background-color: var(--articleBgColor);
+          // カードを囲うクラス
+          & .articleCover {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            // カードクラス
+            & .card {
+              & a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: var(--fontColor);
+              }
+              display: flex;
+              flex-flow: column;
+              overflow: hidden;
+              width: 150px;
+              height: 200px;
+              margin: 20px 20px;
+              box-shadow: var(--cardShadow);
+              border: 1px solid rgba(0, 0, 0, 0.274);
+              cursor: pointer;
+              //observeアニメーション
+              transition: transform, opacity 0.5s;
+              transform: translate(10%, 0%);
+              opacity: 0;
+              & .upperCard {
+                height: 65%;
+                width: 100%;
+                overflow: hidden;
+              }
+              & .lowerCard {
+                overflow: hidden;
+                height: 35%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-top: 1px solid rgba(0, 0, 0, 0.582);
+                font-size: 1.1rem;
+              }
+            }
+            & .cardload {
+              opacity: 1;
+              transform: none;
+            }
+            //   HTMLセクション
+            & .htmlcard {
+              & .lowerCard {
+                background: linear-gradient(
+                  318deg,
+                  rgba(254, 153, 0, 1) 0%,
+                  rgba(255, 255, 255, 1) 100%
+                );
+              }
+            }
+            //   CSS、SASSセクション
+            & .cssSassCard {
+              & .lowerCard {
+                background: linear-gradient(
+                  318deg,
+                  rgba(254, 0, 94, 1) 0%,
+                  rgba(64, 214, 250, 1) 100%
+                );
+                color: white;
+              }
+            }
+            //   JavaScriptセクション
+            & .jscard {
+              & .lowerCard {
+                background-color: rgb(123, 121, 255);
+                color: white;
+              }
+            }
+            //   Jsライブラリセクション
+            & .jslibrarycard {
+              & .lowerCard {
+                font-size: 1.2rem;
+                font-weight: var(--fontWeight400);
+                background-color: rgb(125, 255, 153);
+              }
+            }
+
+            //   個別カードID
+            & #jslibrary1Animejs {
+              & .upperCard {
+                width: 150px;
+                height: 130px;
+                & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              & .lowerCard {
+                font-size: 1.2rem;
+                font-weight: var(--fontWeight400);
+              }
+            }
+            & #jsLibrary3Swiper {
+              & .upperCard {
+                width: 150px;
+                height: 130px;
+                & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              & .lowerCard {
+                font-size: 1.2rem;
+                font-weight: var(--fontWeight400);
+              }
+            }
+            & #html2Tag {
+              & .lowerCard {
+                font-size: 1rem;
+              }
+            }
+            & #css2Sass {
+              & .lowerCard {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+      // トップに戻るボタン
+      & .moveTopBtn {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid var(--fontColor);
+        cursor: pointer;
+        background-color: white;
+      }
+      & .is-in{
+        display: flex;
+      }
+    }
+    //   フッター
+    & footer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 20px;
+      font-size: small;
+      background-color: var(--footerBgColor);
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ちょこみんの学習スペース</title>
+    <link rel="stylesheet" href="../../css/html1Description.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header id="header">
+      <a href="../../index.html">
+        <img src="../../img/index/cmicodelogo.png" alt="cmicodelogo.png" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="">お問い合わせ</a></li>
+          <li><a href="">ログイン</a></li>
+          <li>
+            <a href=""><i class="ai-bell"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- メイン -->
+    <main>
+      <!-- ナビゲーション -->
+      <nav id="mainNavi">
+        <ul>
+          <li>
+            <a href="../../index.html"><i class="ai-home"></i>TOP</a
+            ><i class="ai-chevron-right"></i>
+          </li>
+          <li><a href="">HTMLとは</a></li>
+        </ul>
+      </nav>
+      <!-- セクション -->
+      <section>
+        <h2><i class="ai-tag"></i>HTMLを徹底解説！</h2>
+        <article>
+          <h3><i class="ai-pin"></i>HTMLとは？</h3>
+          <div class="wrapper content1">
+            「<span
+              >ハイパーテキスト・マークアップ・ランゲージ（Hyper Text Markup
+              Language）</span
+            >
+            」を略した言葉です。
+            <br />
+            HTMLの意味を簡単に説明すると、マークアップ（文章構成の指示）をコンピューターが理解できる形で表した言語のことです。
+            <br />
+            これだけでは何を言ってるかわからないと思います。もっとかみ砕いて説明するとWebサイトなどの骨組みのようなものであると言えるでしょう。
+            <br />
+            骨組みだけでは見栄えが悪いのでその見た目を整えるためにCSSが使われています。ここでCSS適用前と適用後のものを見てみましょう！
+            <br />
+          </div>
+          <!-- ソースエリア -->
+          <div id="html-css">
+            <!-- HTMLエリア -->
+            <div id="htmlArea">
+              <p>HTML</p>
+              <img src="../../img/html1Description/icon.jpg" alt="" />
+              <h5>みなさん初めまして！ちょこみんと申します!</h5>
+              最近プログラミングを勉強し始めた初心者プログラマーです！
+              <br />現在のところHTML+CSS(Sass)+JavaScriptをかじっていて、すごく楽しいです。ˆ
+              •͈ ·̫ •͈ ˆ ♪
+              <br />将来はフリーランスとして頑張っていきたいと考えております！
+            </div>
+            <!-- ここからCSSエリア -->
+            <div id="cssArea">
+              <p>HTML+CSS</p>
+              <div class="bg">
+                <div id="authorArea">
+                  <img src="../../img/html1Description/icon.jpg" alt="" />
+                  <h5>みなさん初めまして！ちょこみんと申します!</h5>
+                </div>
+                <div class="text">
+                  最近プログラミングを勉強し始めた<span
+                    >初心者プログラマーです！</span
+                  >
+                  <br />現在のところ<span>HTML+CSS(Sass)+JavaScript</span>をかじっていて、すごく楽しいです。ˆ
+                  •͈ ·̫ •͈ ˆ ♪
+                  <br />将来は<span>フリーランス</span>として頑張っていきたいと考えております！
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ソースエリアここまで -->
+          <div class="wrapper">
+            <p>
+              こんな感じでHTMLだけだと装飾がされておらず、骨組みって感じがしますよね？なのでHTML単体で使うことはあまりないんじゃないかなと勝手に思ってます。（しらんけど）
+            </p>
+          </div>
+          <h3><i class="ai-pin"></i>HTMLの書き方を簡単に説明します！</h3>
+          <div class="wrapper">
+            <h4><i class="ai-tetragon"></i>タグで挟む</h4>
+            　タグの1例をあげると「<span style="color: blue">Divタグ</span>
+            」というものがあります。
+            <div id="sauceArea2">
+              <p>
+                <span>&lt;Div&gt;</span>Hello world !!!<span>&lt;/Div&gt;</span>
+              </p>
+            </div>
+            <p>
+              　また、タグの中でも閉じタグがないものも存在します。それらは<span
+                style="color: rgb(171, 55, 248)"
+                >void要素</span
+              >と呼ばれます。
+            </p>
+            <div id="tags">
+              <i class="ai-triangle-right"></i>&lt;br&gt;<br />
+              <i class="ai-triangle-right"></i>&lt;hr&gt;<br />
+              <i class="ai-triangle-right"></i>&lt;img&gt;<br />
+              <i class="ai-triangle-right"></i>&lt;input&gt;<br />
+              <i class="ai-triangle-right"></i>&lt;link&gt;<br />
+              <i class="ai-triangle-right"></i>&lt;meta&gt;
+            </div>
+            <p>
+              　閉じタグのある要素でも省略できるものもありますが、わかりにくいので私は基本的に閉じタグを省略して書きません。
+            </p>
+          </div>
+          <h3><i class="ai-pin"></i>HTMLでこんなことができる！</h3>
+          <div class="wrapper">
+            <h4><i class="ai-tetragon"></i>ブログパーツを編集できる</h4>
+            　ブログをされている場合、パーツはHTMLやCSSで作られているものが多いと思います。HTMLが書ければ、自分の思った通りに編集できますね。
+            <h4><i class="ai-tetragon"></i>自分のWebサイトが作れる</h4>
+            　自分のお店のホームページを作ったり、何か趣味をお持ちの場合、披露する場所を自分で作ることができます。
+            <h4>
+              <i class="ai-tetragon"></i>制作ソフトがなくてもWebサイトが作れる
+            </h4>
+            　専門のWeb制作ソフトはとても高額です。ソフトが無くても作る事ができれば、かなりの節約になります。
+            手持ちの環境で始められる
+            HTMLを書くのは、まずはパソコンに入っているテキストエディタで十分。表示もWebブラウザがあればすぐに確かめられます。パソコンとネット環境さえあれば、準備資金0円ではじめられるというのはメリットです。
+            <h4>
+              <i class="ai-tetragon"></i
+              >他のプログラミング言語の入り口にピッタリ
+            </h4>
+            　PHP,Java,スマホアプリなど他のプログラミング言語でも、ブラウザに表示させるときはHTMLを使います。いつかはプログラミングを学んでみたいと考えている方の入門言語として、最適です。
+          </div>
+        </article>
+      </section>
+      <!-- トップボタン -->
+      <div id="moveTopBtn">↑</div>
+    </main>
+    <!-- フッター -->
+    <footer>
+      <p>Created by Chocomin</p>
+    </footer>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+
+    <script src="../../js/html1DescriptionScript.js"></script>
+  </body>
+</html>
