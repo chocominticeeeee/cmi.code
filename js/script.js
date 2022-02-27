@@ -196,7 +196,7 @@ moveTopBtnElem.addEventListener("click", function () {
 $(function () {
   $(window).scroll(function () {
     var scroll = $(this).scrollTop();
-    console.log(scroll);
+    // console.log(scroll);
     if (scroll >= 200) {
       $(".moveTopBtn").addClass("is-in");
     } else {
